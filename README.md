@@ -38,7 +38,7 @@ A new Flutter project.
 |       Execute the following in your terminal: `flutter pub get`.                                 |
 |                                                                                                  |
 |    2️⃣ SDK Version Check: Ensure you have the correct Dart SDK version.                           |
-|       [Note]: `The current Dart SDK version is 2.18.6`.                                          |
+|       [Note]: `The current Dart SDK version is 3.2.4`.                                          |
 |       [Error]: Might be `shopingo requires SDK version >=3.0.5 <4.0.0`.                           |
 |       This indicates version solving has failed due to a mismatch.                               |
 |       [Solution]: Upgrade Flutter - To rectify SDK version mismatches and stay updated,          |
