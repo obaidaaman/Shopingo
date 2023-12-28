@@ -28,12 +28,27 @@ class TPricingCalculator {
   static double getTaxRateForLocation(String location) {
   // Lookup the tax rate for the given location from a tax rate database or API.
   // Return the appropriate tax rate.
-  return 0.10; // Example tax rate of 10%
+ if(location == "United Kingdom" ||
+     location == "United States of America " ||
+     location == "UK" ||
+     location == "USA")
+ {
+   return 0.20;
+ }
+ return 0.10; // Example tax rate of 10%
   }
 
   static double getShippingCost(String location) {
   // Lookup the shipping cost for the given location using a shipping rate API.
   // Calculate the shipping cost based on various factors like distance, weight, etc.
+    if(location == "United Kingdom" ||
+        location == "United States of America " ||
+        location == "UK" ||
+        location == "USA")
+    {
+      return 10.00 ;
+    }
+
   return 5.00; // Example shipping cost of $5
   }
 
