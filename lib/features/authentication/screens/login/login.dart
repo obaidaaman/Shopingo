@@ -8,6 +8,8 @@ import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
+import '../../../../common/widgets/login_signup/form_divider.dart';
+import '../../../../common/widgets/login_signup/social_buttons.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -30,10 +32,10 @@ class LoginPage extends StatelessWidget {
               /// Divider
               TFormDivider(isdark: isdark,text:  TTexts.orSignInWith.capitalize!),
 
-              SizedBox(height: TSizes.sm,),
+              const SizedBox(height: TSizes.sm,),
 
               /// Social Buttons
-              TSocialButtons()
+              const TSocialButtons()
             ],
           ),
         ),
@@ -42,85 +44,8 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class TSocialButtons extends StatelessWidget {
-  const TSocialButtons({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-              border: Border.all(color: TColors.grey),
-              borderRadius: BorderRadius.circular(100)),
-          child: IconButton(
-            onPressed: () {},
-            icon: Image(
-              width: TSizes.iconMd,
-              height: TSizes.iconMd,
-              image: AssetImage(TImages.google),
-            ),
-          ),
-        ),
-        SizedBox(width: TSizes.spaceBtwItems,),
-        Container(
-          decoration: BoxDecoration(
-              border: Border.all(color: TColors.grey),
-              borderRadius: BorderRadius.circular(100)),
-          child: IconButton(
-            onPressed: () {},
-            icon: Image(
-              width: TSizes.iconMd,
-              height: TSizes.iconMd,
-              image: AssetImage(TImages.facebook),
-            ),
-          ),
-        )
-      ],
-    );
-  }
-}
 
-class TFormDivider extends StatelessWidget {
-  const TFormDivider({
-    super.key,
-    required this.isdark, required this.text,
-  });
-
-  final bool isdark;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Flexible(
-          child: Divider(
-            color: isdark ? TColors.darkGrey : TColors.grey,
-            indent: 60,
-            endIndent: 5,
-            thickness: 0.5,
-          ),
-        ),
-        Text(
-         text,
-          style: Theme.of(context).textTheme.labelMedium,
-        ),
-        Flexible(
-          child: Divider(
-            color: isdark ? TColors.darkGrey : TColors.grey,
-            indent: 5,
-            endIndent: 60,
-            thickness: 0.5,
-          ),
-        )
-      ],
-    );
-  }
-}
 
 class TLoginForm extends StatelessWidget {
   const TLoginForm({
