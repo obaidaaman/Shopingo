@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/features/authentication/screens/signup/signup.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
-
 import '../../../../common/styles/spacing_styles.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../common/widgets/login_signup/social_buttons.dart';
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
               TLoginForm(),
 
               /// Divider
-              TFormDivider(isdark: isdark,text:  TTexts.orSignInWith.capitalize!),
+              TFormDivider(isdark: isdark,text: TTexts.orSignInWith.capitalize!),
 
               const SizedBox(height: TSizes.sm,),
 
@@ -44,6 +44,40 @@ class LoginPage extends StatelessWidget {
   }
 }
 
+class TLoginHeader extends StatelessWidget {
+  const TLoginHeader({
+    super.key,
+    required this.isdark,
+  });
+
+  final bool isdark;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image(
+          image: AssetImage(
+              isdark ? TImages.lightAppLogo : TImages.darkAppLogo),
+          height: 150,
+        ),
+        Text(
+          TTexts.loginTitle,
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+        const SizedBox(
+          height: TSizes.sm,
+        ),
+        Text(
+          TTexts.loginSubTitle,
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+
+      ],
+    );
+  }
+}
 
 
 
@@ -79,7 +113,7 @@ class TLoginForm extends StatelessWidget {
                   prefixIcon: Icon(Iconsax.password_check),
                   labelText: TTexts.password,
                   suffixIcon: Icon(Iconsax.eye_slash))),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwInputFields / 100,
           ),
           Row(
@@ -96,13 +130,15 @@ class TLoginForm extends StatelessWidget {
                   child: Text(TTexts.forgetPassword))
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwSections/5,
           ),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+               
+              },
               child: Text(TTexts.signIn),
             ),
           ),
@@ -112,7 +148,10 @@ class TLoginForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                
+                Get.to(() => const SignUpScreen());
+              },
               child: Text(TTexts.createAccount),
             ),
           )
@@ -122,37 +161,3 @@ class TLoginForm extends StatelessWidget {
   }
 }
 
-class TLoginHeader extends StatelessWidget {
-  const TLoginHeader({
-    super.key,
-    required this.isdark,
-  });
-
-  final bool isdark;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image(
-          image: AssetImage(
-              isdark ? TImages.lightAppLogo : TImages.darkAppLogo),
-          height: 150,
-        ),
-        Text(
-          TTexts.loginTitle,
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-        SizedBox(
-          height: TSizes.sm,
-        ),
-        Text(
-          TTexts.loginSubTitle,
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-
-      ],
-    );
-  }
-}

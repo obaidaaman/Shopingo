@@ -30,7 +30,7 @@ class OnBoardingController extends GetxController {
   }
 
   void skipPage() {
-    Get.to(const LoginPage(),
+    Get.offAll(const LoginPage(),
         curve: Curves.ease, duration: Duration(milliseconds: 300));
   }
 }
