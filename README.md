@@ -2,35 +2,25 @@
 
 A new Flutter project.
 
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-|                                                                                                  |
-|                                   WELCOME TO [Shopingo]                                           |  
-|                                                                                                  |
-|    Greetings,                                                                                    |
-|                                                                                                  |
-            
-|    This repository  houses a robust e-commerce solution developed using the Flutter framework. 
+ WELCOME TO [Shopingo]                                             
+   Greetings,                                                                                    
+   This repository  houses a robust e-commerce solution developed using the Flutter framework. 
          
           
-        Every line of code here reflects my commitment to quality, efficiency, and 
-          scalability.                 |
+ Every line of code here reflects my commitment to quality, efficiency, and 
+          scalability.                 
           
                                                                                                 
-|    I am dedicated to continuous improvement and I welcome feedback to make this                |
-|    solution even more industry-leading. Dive in, explore, and let's innovate together.           |
-|                                                                                                  |
-|    Regards,                                                                                      |
-|    Aman Obaid
-                                                                                 |
-|                                                                                                  |
-└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+ I am dedicated to continuous improvement and I welcome feedback to make this                
+    solution even more industry-leading. Dive in, explore, and let's innovate together.      
 
 
 
 
 
 
-# --------------  INITIALIZATION  ---------------- #
+
+
 
 ┌─── GETTING STARTED ──────────────────────────────────────────────────────────────────────────────┐
 |                                                                                                  |
