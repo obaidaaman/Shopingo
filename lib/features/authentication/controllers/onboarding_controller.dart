@@ -22,15 +22,15 @@ class OnBoardingController extends GetxController {
     if (currentPageIndex.value < 2) {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(page,
-          duration: Duration(milliseconds: 300), curve: Curves.ease);
+          duration: const Duration(milliseconds: 300), curve: Curves.ease);
     } else {
       Get.offAll(const LoginPage(),
-          curve: Curves.ease, duration: Duration(milliseconds: 300));
+          curve: Curves.ease, duration: const Duration(milliseconds: 300));
     }
   }
 
   void skipPage() {
     Get.offAll(const LoginPage(),
-        curve: Curves.ease, duration: Duration(milliseconds: 300));
+        curve: Curves.ease, duration: const Duration(milliseconds: 300));
   }
 }
